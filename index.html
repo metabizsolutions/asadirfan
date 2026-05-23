@@ -1,84 +1,424 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Asad Irfan - Software Developer & Creative Designer Portfolio">
+    <meta name="description" content="Asad Irfan - Team Leader & Full Stack Developer Portfolio">
     <title>Asad Irfan - Portfolio</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --apple-blue: #007aff;
+            --apple-pink: #ff2d55;
+            --apple-purple: #5856d6;
+            --glass-bg: rgba(255, 255, 255, 0.45);
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --text-dark: #1d1d1f;
+            --bg-light: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.5;
+            overflow-x: hidden;
+            letter-spacing: -0.01em;
+            position: relative;
+        }
+
+        /* Dynamic Background */
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.5;
+            animation: move linear infinite;
+        }
+
+        .blob-1 {
+            background: var(--apple-blue);
+            top: -10%;
+            left: -10%;
+            animation-duration: 25s;
+        }
+
+        .blob-2 {
+            background: var(--apple-pink);
+            top: 50%;
+            left: 70%;
+            animation-duration: 30s;
+        }
+
+        .blob-3 {
+            background: var(--apple-purple);
+            top: 80%;
+            left: 20%;
+            animation-duration: 20s;
+        }
+
+        .blob-4 {
+            background: #ffcc00;
+            top: 20%;
+            left: 40%;
+            animation-duration: 35s;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(100px, 50px) scale(1.2);
+            }
+
+            66% {
+                transform: translate(-50px, 150px) scale(0.8);
+            }
+
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .outfit {
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--text-dark) !important;
+        }
+
+        .hero {
+            padding: 180px 0 120px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(180deg, #1d1d1f 0%, #434345 50%, #6e6e73 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            color: var(--apple-blue);
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        .btn-apple {
+            background: var(--text-dark);
+            color: white;
+            border-radius: 980px;
+            padding: 12px 28px;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border: none;
+            box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-apple:hover {
+            transform: scale(1.1) translateY(-2px);
+            background: #000;
+            color: white;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-apple-outline {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--apple-blue);
+            color: var(--apple-blue);
+            border-radius: 980px;
+            padding: 12px 28px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-apple-outline:hover {
+            background: rgba(0, 122, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(50px) saturate(150%);
+            -webkit-backdrop-filter: blur(50px) saturate(150%);
+            border: 1px solid var(--glass-border);
+            border-radius: 36px;
+            padding: 2.5rem;
+            height: 100%;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05),
+                inset 0 0 20px rgba(255, 255, 255, 0.2);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            border-color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 5rem;
+            background: linear-gradient(to bottom, #1d1d1f, #86868b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(0, 122, 255, 0.1);
+            color: var(--apple-blue);
+            margin: 4px;
+        }
+
+        .skill-node {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            padding: 25px;
+            border-radius: 28px;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .skill-node:hover {
+            transform: scale(1.1) rotate(2deg);
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-node i {
+            font-size: 2.2rem;
+            background: linear-gradient(135deg, var(--apple-blue), var(--apple-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .invisible-skill {
+            background: rgba(255, 255, 255, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            border-radius: 980px;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05) rotate(-1deg);
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
+            color: white;
+        }
+
+        .footer {
+            padding: 80px 0;
+            background: transparent;
+            text-align: center;
+            color: #86868b;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .blob {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- Background Container -->
+    <div class="bg-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
-                    <h1>Hi, I'm Asad Irfan</h1>
-                    <h2>CEO at MetaBiz Solutions</h2>
-                    <p class="lead mb-4">Software Developer & Creative Designer crafting innovative digital solutions with passion and precision</p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">View My Work</a>
-                        <a href="#contact" class="btn btn-outline-primary" data-aos="fade-up" data-aos-delay="400">Contact Me</a>
-                    </div>
-                    <div class="company-link mt-4" data-aos="fade-up" data-aos-delay="600">
-                        <a href="https://metabizsolution.com" target="_blank" class="text-decoration-none">
-                            <i class="fas fa-building"></i> Visit MetaBiz Solutions
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="hero-image">
-                        <img src="PNG.png" alt="Asad Irfan" class="img-fluid">
-                    </div>
-                </div>
+            <a class="navbar-brand" href="#">ASAD IRFAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-dark fw-500" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-500" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-500" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-500" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-center">
+        <div class="container">
+            <h1 data-aos="fade-up">Asad Irfan</h1>
+            <h2 data-aos="fade-up" data-aos-delay="100">Software Developer at MetaBiz Solutions</h2>
+            <p class="lead mb-5 col-lg-7 mx-auto text-dark" style="opacity: 0.8;" data-aos="fade-up"
+                data-aos-delay="200">
+                Crafting world-class digital experiences through advanced software engineering,
+                automation architecture, and creative leadership.
+            </p>
+            <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="300">
+                <a href="#experience" class="btn btn-apple">View Projects</a>
+                <a href="#contact" class="btn btn-apple-outline">Let's Connect</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
-            <div class="row">
-                <div class="col-lg-12" data-aos="fade-up">
-                    <div class="about-content">
-                        <p class="about-text">
-                            I'm Asad Irfan, CEO at MetaBiz Solution and a passionate developer and designer with expertise in software development, 
-                            graphic design, and 3D modeling. With a creative mindset and technical skills, 
-                            I strive to create innovative and impactful solutions that make a difference.
-                        </p>
-                        <div class="key-points mt-5">
-                            <div class="row text-center">
-                                <div class="col-md-4 mb-4">
-                                    <div class="key-point">
-                                        <i class="fas fa-code fa-2x mb-3"></i>
-                                        <h3>Clean Code</h3>
-                                        <p>Writing elegant, efficient, and maintainable code</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-4">
-                                    <div class="key-point">
-                                        <i class="fas fa-palette fa-2x mb-3"></i>
-                                        <h3>Creative Design</h3>
-                                        <p>Crafting beautiful and intuitive user experiences</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-4">
-                                    <div class="key-point">
-                                        <i class="fas fa-rocket fa-2x mb-3"></i>
-                                        <h3>Innovation</h3>
-                                        <p>Pushing boundaries with cutting-edge solutions</p>
-                                    </div>
-                                </div>
-                            </div>
+    <!-- Work Experience -->
+    <section id="experience" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
+            <div class="row g-4">
+                <!-- US Project: Automation -->
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="glass-card">
+                        <i class="fas fa-robot mb-3 text-primary fa-2x"></i>
+                        <h3>US Real Estate Automation</h3>
+                        <p class="text-secondary small">US Dynamic Solutions Client</p>
+                        <p>Developed a custom automation suite for lead generation and property data synchronization
+                            across multiple platforms.</p>
+                        <div class="mt-auto">
+                            <span class="tag">Python</span>
+                            <span class="tag">Selenium</span>
+                            <span class="tag">AWS Lambda</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- US Project: Web Scraping -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card">
+                        <i class="fas fa-spider mb-3 text-primary fa-2x"></i>
+                        <h3>Market Intelligence Scraper</h3>
+                        <p class="text-secondary small">US E-commerce Logistics Client</p>
+                        <p>Built a high-scale real-time scraping engine to track competitor pricing and inventory levels
+                            for 50k+ products hourly.</p>
+                        <div class="mt-auto">
+                            <span class="tag">Scrapy</span>
+                            <span class="tag">BeautifulSoup</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baloch Tools -->
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="glass-card p-4">
+                        <h4>Baloch Tools POS</h4>
+                        <p class="small text-muted">Python / Tkinter / SQLite</p>
+                        <p>Complete retail inventory and sales management ecosystem.</p>
+                        <div class="mt-3">
+                            <span class="tag">Desktop App</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shameem Autos -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-4">
+                        <h4>Shameem Autos POS</h4>
+                        <p class="small text-muted">C# / WinForms / MySQL</p>
+                        <p>Enterprise POS for automotive parts and decorative management.</p>
+                        <div class="mt-3">
+                            <span class="tag">Windows App</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gasoora -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-4">
+                        <h4>Gasoora Brothers POS</h4>
+                        <p class="small text-muted">C# / WinForms / SQLite</p>
+                        <p>Dual-vertical POS for both Sweets/Bakery and Restaurant branches.</p>
+                        <div class="mt-3">
+                            <span class="tag">Retail</span>
+                            <span class="tag">Restaurant</span>
                         </div>
                     </div>
                 </div>
@@ -87,165 +427,72 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
-            <div class="row">
-                <div class="col-lg-3" data-aos="fade-right" data-aos-delay="200">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-laptop-code"></i> Software Development</h3>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <i class="fab fa-python"></i>
-                                <span>Python</span>
-                                <div class="skill-level">Advanced</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-windows"></i>
-                                <span>C#</span>
-                                <div class="skill-level">Intermediate</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-android"></i>
-                                <span>Android</span>
-                                <div class="skill-level">Advanced</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-java"></i>
-                                <span>Java</span>
-                                <div class="skill-level">Intermediate</div>
-                            </div>
-                        </div>
+    <section id="skills" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title" data-aos="fade-up">Expertise & Skills</h2>
+            <div class="row g-4">
+                <!-- Hard Skills -->
+                <div class="col-6 col-md-3" data-aos="zoom-in">
+                    <div class="skill-node">
+                        <i class="fab fa-python"></i>
+                        <h5>Python</h5>
                     </div>
                 </div>
-                <div class="col-lg-3" data-aos="fade-up" data-aos-delay="400">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-globe"></i> Web Development</h3>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <i class="fab fa-html5"></i>
-                                <span>HTML5</span>
-                                <div class="skill-level">Advanced</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-css3-alt"></i>
-                                <span>CSS3</span>
-                                <div class="skill-level">Advanced</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-js"></i>
-                                <span>JavaScript</span>
-                                <div class="skill-level">Intermediate</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-react"></i>
-                                <span>React</span>
-                                <div class="skill-level">Basic</div>
-                            </div>
-                        </div>
+                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="skill-node">
+                        <i class="fab fa-windows"></i>
+                        <h5>C# / .NET</h5>
                     </div>
                 </div>
-                <div class="col-lg-3" data-aos="fade-up" data-aos-delay="600">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-database"></i> Database & Tools</h3>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <i class="fas fa-database"></i>
-                                <span>MySQL</span>
-                                <div class="skill-level">Advanced</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-server"></i>
-                                <span>SQLite</span>
-                                <div class="skill-level">Advanced</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-git-alt"></i>
-                                <span>Git</span>
-                                <div class="skill-level">Intermediate</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fab fa-aws"></i>
-                                <span>AWS</span>
-                                <div class="skill-level">Basic</div>
-                            </div>
-                        </div>
+                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="skill-node">
+                        <i class="fab fa-android"></i>
+                        <h5>Kotlin</h5>
                     </div>
                 </div>
-                <div class="col-lg-3" data-aos="fade-left" data-aos-delay="800">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-paint-brush"></i> Design & Creative</h3>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <i class="fas fa-palette"></i>
-                                <span>Graphics Design</span>
-                                <div class="skill-level">Advanced</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-video"></i>
-                                <span>Video Editing</span>
-                                <div class="skill-level">Advanced</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-cube"></i>
-                                <span>3D Modeling</span>
-                                <div class="skill-level">Intermediate</div>
-                            </div>
-                            <div class="skill-item">
-                                <i class="fas fa-pencil-ruler"></i>
-                                <span>UI/UX Design</span>
-                                <div class="skill-level">Intermediate</div>
-                            </div>
-                        </div>
+                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="skill-node">
+                        <i class="fas fa-terminal"></i>
+                        <h5>Automation</h5>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Projects</h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>Baloch Tools</h3>
-                            <p>A comprehensive inventory management system featuring stock tracking, sales management, and detailed reporting capabilities.</p>
-                            <div class="technologies">
-                                <span class="badge bg-primary">Python</span>
-                                <span class="badge bg-primary">SQLite3</span>
-                                <span class="badge bg-primary">Tkinter</span>
-                            </div>
-                        </div>
+                <!-- Invisible Skills -->
+                <div class="col-md-4" data-aos="fade-right">
+                    <div class="skill-node invisible-skill text-start">
+                        <i class="fas fa-lightbulb"></i>
+                        <h5>Creative Mindset</h5>
+                        <p class="small text-muted">Approaching technical challenges with artistic flair and innovative
+                            thinking.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>Expense Manager</h3>
-                            <p>Modern Android application for expense tracking with beautiful UI and seamless user experience.</p>
-                            <div class="technologies">
-                                <span class="badge bg-primary">Kotlin</span>
-                                <span class="badge bg-primary">Jetpack Compose</span>
-                                <span class="badge bg-primary">Room</span>
-                            </div>
-                        </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="skill-node invisible-skill text-start">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <h5>Problem Solving</h5>
+                        <p class="small text-muted">Deconstructing complex bottlenecks into elegant, scalable solutions.
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h3>Ecommerce Website</h3>
-                            <p>Feature-rich online shopping platform with secure user authentication and seamless shopping experience.</p>
-                            <div class="technologies">
-                                <span class="badge bg-primary">HTML</span>
-                                <span class="badge bg-primary">CSS</span>
-                                <span class="badge bg-primary">JavaScript</span>
-                                <span class="badge bg-primary">MySQL</span>
-                            </div>
-                        </div>
+                <div class="col-md-4" data-aos="fade-left">
+                    <div class="skill-node invisible-skill text-start">
+                        <i class="fas fa-users"></i>
+                        <h5>Leadership</h5>
+                        <p class="small text-muted">Empowering teams and leading by example at MetaBiz Solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="skill-node invisible-skill text-start">
+                        <i class="fas fa-brain"></i>
+                        <h5>Critical Thinking</h5>
+                        <p class="small text-muted">Analyzing architectural decisions for long-term sustainability.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-node invisible-skill text-start">
+                        <i class="fas fa-sync"></i>
+                        <h5>Adaptability</h5>
+                        <p class="small text-muted">Rapidly evolving with the latest technological shifts.</p>
                     </div>
                 </div>
             </div>
@@ -253,52 +500,60 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact-container">
-            <div class="contact-header">
-                <h2>Let's Connect</h2>
-                <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out through any of these channels!</p>
-            </div>
-            <div class="contact-cards">
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>Drop me a message anytime. I'll get back to you as soon as possible.</p>
-                    <a href="mailto:asadirfanmzg@gmail.com" class="contact-card-link">
-                        asadirfanmzg@gmail.com
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <p>Available for calls during business hours. Feel free to reach out.</p>
-                    <a href="tel:+923226527520" class="contact-card-link">
-                        +92 322 6527520
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="contact-card">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <p>Connect with me professionally and stay updated with my work.</p>
-                    <a href="https://www.linkedin.com/in/asad-irfan-b2294232b/" class="contact-card-link" target="_blank">
-                        View Profile
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+    <section id="contact" class="py-5 text-center">
+        <div class="container py-5">
+            <h2 class="section-title" data-aos="fade-up">Let's Talk</h2>
+            <div class="glass-card col-lg-8 mx-auto py-5" data-aos="zoom-in">
+                <p class="mb-5 text-dark fs-5">Ready to start your next big project? Reach out directly.</p>
+                <a href="https://wa.me/923226527520" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    Message on WhatsApp
+                </a>
+                <div class="mt-5 text-dark" style="opacity: 0.7;">
+                    <p>Email: asadirfanmzg@gmail.com</p>
+                    <p>Phone: +92 322 6527520</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Asad Irfan. Designed with passion & Liquid Glass.</p>
+        </div>
+    </footer>
+
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             duration: 1000,
-            once: true
+            once: true,
+            offset: 50
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').style.padding = '0.7rem 0';
+                document.querySelector('.navbar').style.background = 'rgba(255, 255, 255, 0.6)';
+                document.querySelector('.navbar').style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+            } else {
+                document.querySelector('.navbar').style.padding = '1rem 0';
+                document.querySelector('.navbar').style.background = 'rgba(255, 255, 255, 0.4)';
+                document.querySelector('.navbar').style.boxShadow = 'none';
+            }
         });
     </script>
-    <script src="main.js"></script>
 </body>
+
 </html>
