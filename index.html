@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <meta name="description" content="Asad Irfan - Software Developer, Team Leader & CEO at MetaBiz Solutions">
-  <title>Asad Irfan — Full-Stack Architect & CEO @ MetaBiz Solutions</title>
+  <meta name="description" content="Asad Irfan - Industrial Automation Specialist, PLC & HMI Programmer, Data Architect & CEO at MetaBiz Solutions">
+  <title>Asad Irfan — Industrial Automation Engineer, PLC/HMI Programmer & CEO @ MetaBiz Solutions</title>
 
-  <!-- Google Fonts: Space Grotesk (Tech Display), Plus Jakarta Sans (UI), JetBrains Mono (Code/CLI) -->
+  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
       --text-main: #edf2f7;
       --text-muted: #8a99ad;
 
-      /* Switchable Cybernetic Accent Themes */
+      /* Cybernetic Accent Themes */
       --accent-primary: #00f0ff;   /* Cyber Cyan */
       --accent-secondary: #10b981; /* Matrix Emerald */
       --accent-tertiary: #6366f1;  /* Quantum Indigo */
@@ -72,9 +72,6 @@
       color: #05070e;
     }
 
-    /* ==========================================
-       3D WEBGL & 2D BINARY TOUCH CANVASES
-       ========================================== */
     #webgl-canvas {
       position: fixed;
       top: 0;
@@ -95,7 +92,6 @@
       pointer-events: none;
     }
 
-    /* Cybernetic Circuit Grid Overlay */
     .cyber-grid-overlay {
       position: fixed;
       inset: 0;
@@ -109,7 +105,6 @@
       -webkit-mask-image: radial-gradient(circle at 50% 45%, black 30%, transparent 90%);
     }
 
-    /* Top Scroll Progress Telemetry Bar */
     .scroll-progress-track {
       position: fixed;
       top: 0;
@@ -128,7 +123,6 @@
       transition: width 0.08s linear;
     }
 
-    /* System Telemetry Top Bar (Desktop) */
     .system-topbar {
       position: fixed;
       top: 3px;
@@ -165,9 +159,7 @@
       box-shadow: 0 0 8px var(--accent-secondary);
     }
 
-    /* ==========================================
-       CUSTOM DEVELOPER TERMINAL CURSOR (DESKTOP)
-       ========================================== */
+    /* CURSOR */
     #cursor-wrapper {
       position: fixed;
       inset: 0;
@@ -216,7 +208,6 @@
       z-index: 99999;
     }
 
-    /* Corner Crosshair Ticks */
     .cursor-reticle::before,
     .cursor-reticle::after {
       content: '';
@@ -227,14 +218,8 @@
       border-style: solid;
       transition: all 0.25s ease;
     }
-    .cursor-reticle::before {
-      top: -2px; left: -2px;
-      border-width: 2px 0 0 2px;
-    }
-    .cursor-reticle::after {
-      bottom: -2px; right: -2px;
-      border-width: 0 2px 2px 0;
-    }
+    .cursor-reticle::before { top: -2px; left: -2px; border-width: 2px 0 0 2px; }
+    .cursor-reticle::after { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
 
     .cursor-tag {
       font-family: var(--font-mono);
@@ -270,9 +255,7 @@
       background: rgba(16, 185, 129, 0.25);
     }
 
-    /* ==========================================
-       NAVIGATION: DESKTOP TOP + MOBILE DEV DOCK
-       ========================================== */
+    /* NAVIGATION */
     .floating-nav {
       position: fixed;
       top: 40px;
@@ -373,7 +356,6 @@
       white-space: nowrap;
     }
 
-    /* Mobile Bottom DevOps Command Dock */
     .mobile-bottom-dock {
       display: none;
       position: fixed;
@@ -428,9 +410,6 @@
       transform: translateY(-2px);
     }
 
-    /* ==========================================
-       LAYOUT & SCROLL REVEAL
-       ========================================== */
     main {
       position: relative;
       z-index: 10;
@@ -453,9 +432,7 @@
       transform: translateY(0);
     }
 
-    /* ==========================================
-       HERO SECTION & LIVE CLI TERMINAL
-       ========================================== */
+    /* HERO */
     .hero-section {
       min-height: 100vh;
       display: flex;
@@ -467,7 +444,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.15fr 0.85fr;
       gap: 3rem;
       align-items: center;
       width: 100%;
@@ -518,7 +495,7 @@
 
     .hero-subtitle {
       font-family: var(--font-mono);
-      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-size: clamp(0.95rem, 1.8vw, 1.25rem);
       color: var(--accent-secondary);
       font-weight: 600;
       margin-bottom: 1.25rem;
@@ -529,11 +506,11 @@
     }
 
     .hero-lead {
-      font-size: 1.08rem;
+      font-size: 1.05rem;
       line-height: 1.75;
       color: var(--text-muted);
       margin-bottom: 2rem;
-      max-width: 600px;
+      max-width: 630px;
     }
 
     .hero-cta-row {
@@ -599,7 +576,7 @@
       transform: translateY(-3px);
     }
 
-    /* Interactive CLI Terminal Emulator Card */
+    /* CLI TERMINAL */
     .terminal-window {
       background: var(--bg-terminal);
       border: 1px solid var(--border-glow);
@@ -711,9 +688,7 @@
       color: #05070e;
     }
 
-    /* ==========================================
-       INFINITE TECH STACK MARQUEE
-       ========================================== */
+    /* MARQUEE */
     .tech-marquee {
       width: 100%;
       overflow: hidden;
@@ -729,17 +704,17 @@
     .marquee-track {
       display: flex;
       width: max-content;
-      animation: scrollTech 26s linear infinite;
+      animation: scrollTech 30s linear infinite;
     }
 
     .marquee-item {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
-      padding: 0 1.4rem;
+      gap: 1.1rem;
+      padding: 0 1.5rem;
       font-family: var(--font-mono);
       font-weight: 600;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       color: var(--text-muted);
@@ -759,9 +734,7 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* ==========================================
-       SECTIONS & HEADINGS
-       ========================================== */
+    /* SECTIONS */
     .section-padding {
       padding: 6.5rem 0;
     }
@@ -799,9 +772,7 @@
       line-height: 1.1;
     }
 
-    /* ==========================================
-       WORK EXPERIENCE & SYSTEM DEPLOYMENTS
-       ========================================== */
+    /* PROJECT CARDS */
     .filter-bar {
       display: flex;
       flex-wrap: wrap;
@@ -970,9 +941,7 @@
       transform: translateX(4px);
     }
 
-    /* ==========================================
-       SKILLS & LEADERSHIP MATRIX
-       ========================================== */
+    /* SKILLS MATRIX */
     .skills-matrix-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -1046,7 +1015,7 @@
       border-radius: 100px;
     }
 
-    /* Executive & Cognitive ("Invisible") Skills Grid */
+    /* COGNITIVE CARDS */
     .cognitive-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1089,9 +1058,7 @@
       margin: 0;
     }
 
-    /* ==========================================
-       CONTACT & DIRECT TRANSMISSION HUB
-       ========================================== */
+    /* CONTACT */
     .comms-card {
       background: linear-gradient(135deg, rgba(13, 18, 32, 0.9) 0%, rgba(7, 10, 19, 0.95) 100%);
       border: 1px solid var(--border-glow);
@@ -1157,9 +1124,7 @@
       color: var(--accent-primary);
     }
 
-    /* ==========================================
-       SYSTEM ARCHITECTURE MODAL INSPECTOR
-       ========================================== */
+    /* MODAL */
     .arch-modal-backdrop {
       position: fixed;
       inset: 0;
@@ -1254,7 +1219,6 @@
       line-height: 1.6;
     }
 
-    /* Footer */
     .cyber-footer {
       border-top: 1px solid var(--border-glass);
       padding: 2.5rem 0;
@@ -1266,9 +1230,6 @@
       z-index: 10;
     }
 
-    /* ==========================================
-       MOBILE & SMALL SCREEN RESPONSIVENESS
-       ========================================== */
     @media (max-width: 992px) {
       .hero-grid {
         grid-template-columns: 1fr;
@@ -1380,22 +1341,22 @@
     <div class="scroll-progress-bar" id="scrollProgressBar"></div>
   </div>
 
-  <!-- 3D WebGL Neural Network & Cyber Core Canvas -->
+  <!-- 3D WebGL Canvas -->
   <canvas id="webgl-canvas"></canvas>
 
-  <!-- 2D Touch & Click Binary Data Packet Stream Canvas -->
+  <!-- 2D Binary Canvas -->
   <canvas id="binary-fx-canvas"></canvas>
 
   <div class="cyber-grid-overlay"></div>
 
   <!-- Desktop System Telemetry Bar -->
   <div class="system-topbar">
-    <span class="status-online">SYS_ONLINE // ASAD_IRFAN_KERNEL_V4.2</span>
-    <span>ROLE: CEO @ METABIZ SOLUTIONS & FULL-STACK ARCHITECT</span>
-    <span id="hud-telemetry">LATENCY: 12ms &nbsp;|&nbsp; X: 0000 &nbsp; Y: 0000</span>
+    <span class="status-online">SYS_ONLINE // ASAD_IRFAN_KERNEL_V4.5</span>
+    <span>DISCIPLINE: AUTOMATION ARCHITECTURE • PLC/HMI • INDUSTRIAL DATA SYSTEMS</span>
+    <span id="hud-telemetry">LATENCY: 08ms &nbsp;|&nbsp; MODBUS/TCP: ACTIVE &nbsp;|&nbsp; X: 0000 &nbsp; Y: 0000</span>
   </div>
 
-  <!-- Custom Cybernetic IDE Reticle Cursor (Desktop) -->
+  <!-- Custom Cursor -->
   <div id="cursor-wrapper">
     <div class="cursor-reticle" id="cursorReticle">
       <span class="cursor-tag" id="cursorTag">EXECUTE</span>
@@ -1403,7 +1364,7 @@
     <div class="cursor-core" id="cursorCore"></div>
   </div>
 
-  <!-- Top Floating Navigation -->
+  <!-- Floating Navigation -->
   <nav class="floating-nav">
     <a href="#home" class="nav-brand" data-cursor="ROOT_DIR">
       <span class="brand-terminal-prompt">&gt;_</span>
@@ -1411,8 +1372,8 @@
     </a>
     <ul class="nav-links">
       <li><a href="#home" class="nav-link-item" data-cursor="KERNEL">~/home</a></li>
-      <li><a href="#experience" class="nav-link-item" data-cursor="DEPLOYMENTS">~/projects</a></li>
-      <li><a href="#skills" class="nav-link-item" data-cursor="TECH_STACK">~/skills</a></li>
+      <li><a href="#experience" class="nav-link-item" data-cursor="DEPLOYMENTS">~/automation</a></li>
+      <li><a href="#skills" class="nav-link-item" data-cursor="TECH_STACK">~/plc-hmi-stack</a></li>
       <li><a href="#contact" class="nav-link-item" data-cursor="SSH_CONNECT">~/contact</a></li>
     </ul>
     <span class="mobile-packet-badge" id="gyroBadge" onclick="enableMobileGyro()">
@@ -1425,19 +1386,19 @@
     </div>
   </nav>
 
-  <!-- Mobile Bottom DevOps Command Dock -->
+  <!-- Mobile Bottom Dock -->
   <div class="mobile-bottom-dock">
     <a href="#home" class="dock-item active">
       <i class="fas fa-terminal"></i>
       <span>Kernel</span>
     </a>
     <a href="#experience" class="dock-item">
-      <i class="fas fa-server"></i>
-      <span>Systems</span>
+      <i class="fas fa-industry"></i>
+      <span>Automation</span>
     </a>
     <a href="#skills" class="dock-item">
       <i class="fas fa-microchip"></i>
-      <span>Stack</span>
+      <span>PLC/HMI</span>
     </a>
     <button class="dock-item" onclick="cycleCyberThemeMobile()">
       <i class="fas fa-sliders"></i>
@@ -1450,14 +1411,14 @@
   </div>
 
   <main>
-    <!-- HERO SECTION WITH LIVE INTERACTIVE CLI TERMINAL -->
+    <!-- HERO SECTION WITH EXPANDED AUTOMATION & INDUSTRIAL FOCUS -->
     <section class="hero-section" id="home">
       <div class="container-custom">
         <div class="hero-grid">
           <div class="hero-left reveal-on-scroll in-view">
             <div class="kernel-badge">
               <span class="pulse-dot"></span>
-              <span>TEAM LEADER • FULL-STACK ARCHITECT • CEO</span>
+              <span>SOFTWARE AUTOMATION • DATA MANAGEMENT • PLC &amp; HMI PROGRAMMING</span>
             </div>
 
             <h1 class="hero-title">
@@ -1465,25 +1426,25 @@
             </h1>
 
             <div class="hero-subtitle">
-              <span><i class="fas fa-code-branch"></i> Software Developer &amp; CEO at MetaBiz Solutions</span>
+              <span><i class="fas fa-industry"></i> Automation Engineer, PLC/HMI Programmer &amp; CEO @ MetaBiz Solutions</span>
             </div>
 
             <p class="hero-lead">
-              Crafting world-class digital experiences through advanced software engineering, high-scale automation architecture, enterprise POS ecosystems, and creative technical leadership.
+              Specialized in end-to-end software automation workflows, enterprise data management, and industrial systems. Delivering robust Ladder Logic/Structured Text PLC routines, intuitive HMI/SCADA interfaces, IoT telemetry, and high-performance desktop business software.
             </p>
 
             <div class="hero-cta-row">
               <a href="#experience" class="btn-cyber btn-cyber-primary" data-cursor="VIEW_DEPLOYMENTS">
-                <i class="fas fa-cubes"></i>
-                <span>View Deployed Systems</span>
+                <i class="fas fa-gears"></i>
+                <span>Explore Automation Projects</span>
               </a>
               <a href="https://metabizsolutions.github.io/official-website/" target="_blank" rel="noopener" class="btn-cyber btn-cyber-company" data-cursor="LAUNCH_METABIZ">
                 <i class="fas fa-rocket"></i>
                 <span>Visit MetaBiz Solutions</span>
               </a>
               <a href="#contact" class="btn-cyber btn-cyber-outline" data-cursor="OPEN_COMMS">
-                <i class="fas fa-satellite-dish"></i>
-                <span>Let's Connect</span>
+                <i class="fas fa-network-wired"></i>
+                <span>Initiate Contact</span>
               </a>
             </div>
           </div>
@@ -1494,33 +1455,35 @@
               <div class="term-dots">
                 <span></span><span></span><span></span>
               </div>
-              <span>asad@metabiz-core: ~/portfolio-cli</span>
-              <span>bash • zsh</span>
+              <span>asad@metabiz-core: ~/industrial-automation-cli</span>
+              <span>bash • industrial-kernel</span>
             </div>
 
             <div class="terminal-body" id="terminalOutput">
               <div class="term-line">
-                <span class="term-prompt">asad@metabiz:~$</span> <span class="term-cmd">./init_profile.sh</span>
+                <span class="term-prompt">asad@metabiz:~$</span> <span class="term-cmd">./diagnose_systems.sh</span>
               </div>
               <div class="term-output">
-                [OK] Loaded Asad Irfan Kernel v4.2<br>
-                • Role: Software Developer &amp; CEO @ MetaBiz Solutions<br>
-                • Core Stack: Python, C#/.NET, Kotlin, Cloud Automation<br>
-                • Type <strong style="color:#fff">help</strong> or tap a command chip below.
+                [OK] Systems Online // Asad Irfan Kernel v4.5<br>
+                • Discipline: Industrial Automation, Software Bots &amp; Data Warehousing<br>
+                • Controller Layer: Siemens TIA Portal (S7-1200/1500), Allen-Bradley Micro800/ControlLogix<br>
+                • SCADA &amp; HMI: WinCC, FactoryTalk, Ignition, C# Modbus RTU/TCP telemetry<br>
+                • Database Core: SQL Server, MySQL, SQLite, MongoDB ETL Pipelines<br>
+                • Type <strong style="color:#fff">help</strong> or select a command below.
               </div>
             </div>
 
             <form class="terminal-input-row" onsubmit="handleTerminalSubmit(event)">
               <span class="term-prompt">&gt;</span>
-              <input type="text" id="terminalInput" class="terminal-input" placeholder="Type a command (help, projects, skills, contact)..." autocomplete="off">
+              <input type="text" id="terminalInput" class="terminal-input" placeholder="Type a command (plc, hmi, data, automation, contact)..." autocomplete="off">
             </form>
 
             <div class="terminal-quick-chips">
               <button type="button" class="term-chip" onclick="runTerminalCommand('whoami')">whoami</button>
+              <button type="button" class="term-chip" onclick="runTerminalCommand('plc')">plc</button>
+              <button type="button" class="term-chip" onclick="runTerminalCommand('hmi')">hmi</button>
+              <button type="button" class="term-chip" onclick="runTerminalCommand('data')">data</button>
               <button type="button" class="term-chip" onclick="runTerminalCommand('projects')">projects</button>
-              <button type="button" class="term-chip" onclick="runTerminalCommand('skills')">skills</button>
-              <button type="button" class="term-chip" onclick="runTerminalCommand('company')">company</button>
-              <button type="button" class="term-chip" onclick="runTerminalCommand('contact')">contact</button>
               <button type="button" class="term-chip" onclick="runTerminalCommand('clear')">clear</button>
             </div>
           </div>
@@ -1528,42 +1491,95 @@
       </div>
     </section>
 
-    <!-- INFINITE TECH MARQUEE -->
+    <!-- EXPANDED INDUSTRIAL & AUTOMATION MARQUEE -->
     <div class="tech-marquee">
       <div class="marquee-track">
-        <div class="marquee-item"><i class="fab fa-python"></i> <span class="bright">Python Automation</span></div>
-        <div class="marquee-item"><i class="fab fa-windows"></i> <span>C# / .NET WinForms</span></div>
-        <div class="marquee-item"><i class="fas fa-spider"></i> <span class="bright">Scrapy &amp; Selenium</span></div>
-        <div class="marquee-item"><i class="fab fa-aws"></i> <span>AWS Lambda Serverless</span></div>
-        <div class="marquee-item"><i class="fab fa-android"></i> <span class="bright">Kotlin Android Dev</span></div>
-        <div class="marquee-item"><i class="fas fa-database"></i> <span>MongoDB • MySQL • SQLite</span></div>
-        <!-- Duplicate for seamless loop -->
-        <div class="marquee-item"><i class="fab fa-python"></i> <span class="bright">Python Automation</span></div>
-        <div class="marquee-item"><i class="fab fa-windows"></i> <span>C# / .NET WinForms</span></div>
-        <div class="marquee-item"><i class="fas fa-spider"></i> <span class="bright">Scrapy &amp; Selenium</span></div>
-        <div class="marquee-item"><i class="fab fa-aws"></i> <span>AWS Lambda Serverless</span></div>
-        <div class="marquee-item"><i class="fab fa-android"></i> <span class="bright">Kotlin Android Dev</span></div>
-        <div class="marquee-item"><i class="fas fa-database"></i> <span>MongoDB • MySQL • SQLite</span></div>
+        <div class="marquee-item"><i class="fas fa-microchip"></i> <span class="bright">Siemens S7-1200 / 1500</span></div>
+        <div class="marquee-item"><i class="fas fa-desktop"></i> <span>HMI &amp; SCADA (WinCC / FactoryTalk)</span></div>
+        <div class="marquee-item"><i class="fas fa-network-wired"></i> <span class="bright">Modbus RTU / TCP &amp; OPC-UA</span></div>
+        <div class="marquee-item"><i class="fas fa-database"></i> <span>Data Pipelines &amp; SQL Warehousing</span></div>
+        <div class="marquee-item"><i class="fab fa-python"></i> <span class="bright">Python Automation &amp; Scraping</span></div>
+        <div class="marquee-item"><i class="fab fa-windows"></i> <span>C# / .NET Industrial Software</span></div>
+        <div class="marquee-item"><i class="fas fa-code"></i> <span class="bright">Ladder Logic &amp; Structured Text (ST)</span></div>
+        <!-- Loop copy -->
+        <div class="marquee-item"><i class="fas fa-microchip"></i> <span class="bright">Siemens S7-1200 / 1500</span></div>
+        <div class="marquee-item"><i class="fas fa-desktop"></i> <span>HMI &amp; SCADA (WinCC / FactoryTalk)</span></div>
+        <div class="marquee-item"><i class="fas fa-network-wired"></i> <span class="bright">Modbus RTU / TCP &amp; OPC-UA</span></div>
+        <div class="marquee-item"><i class="fas fa-database"></i> <span>Data Pipelines &amp; SQL Warehousing</span></div>
+        <div class="marquee-item"><i class="fab fa-python"></i> <span class="bright">Python Automation &amp; Scraping</span></div>
+        <div class="marquee-item"><i class="fab fa-windows"></i> <span>C# / .NET Industrial Software</span></div>
+        <div class="marquee-item"><i class="fas fa-code"></i> <span class="bright">Ladder Logic &amp; Structured Text (ST)</span></div>
       </div>
     </div>
 
-    <!-- WORK EXPERIENCE & PRODUCTION SYSTEMS -->
+    <!-- WORK EXPERIENCE, AUTOMATION & INDUSTRIAL SYSTEMS -->
     <section class="section-padding" id="experience">
       <div class="container-custom">
         <div class="section-header-wrap reveal-on-scroll">
-          <span class="section-eyebrow">01_PRODUCTION_DEPLOYMENTS</span>
-          <h2 class="section-heading">Work Experience &amp; Engineered Systems</h2>
+          <span class="section-eyebrow">01_ENGINEERED_SYSTEMS_&amp;_DEPLOYMENTS</span>
+          <h2 class="section-heading">Automation, Industrial Software &amp; Data Deployments</h2>
         </div>
 
         <div class="filter-bar reveal-on-scroll">
-          <button class="filter-btn active" onclick="filterProjects('all', this)" data-cursor="ALL_NODES">All Systems (5)</button>
-          <button class="filter-btn" onclick="filterProjects('cloud', this)" data-cursor="CLOUD_BOTS">US Cloud &amp; Scraping (2)</button>
-          <button class="filter-btn" onclick="filterProjects('pos', this)" data-cursor="ENTERPRISE_POS">Enterprise POS Suites (3)</button>
+          <button class="filter-btn active" onclick="filterProjects('all', this)" data-cursor="ALL_NODES">All Deployments (6)</button>
+          <button class="filter-btn" onclick="filterProjects('industrial', this)" data-cursor="PLC_HMI">PLC, HMI &amp; Industrial Softwares (2)</button>
+          <button class="filter-btn" onclick="filterProjects('software-auto', this)" data-cursor="SOFTWARE_BOTS">Software Automation &amp; Data (2)</button>
+          <button class="filter-btn" onclick="filterProjects('pos', this)" data-cursor="ENTERPRISE_POS">Industrial POS &amp; Inventory (2)</button>
         </div>
 
         <div class="projects-grid" id="projectsGrid">
-          <!-- 1. US Real Estate Automation -->
-          <div class="project-card span-6 tilt-card reveal-on-scroll" data-category="cloud" onclick="openArchModal(0)" data-cursor="INSPECT_ARCH">
+          <!-- 1. Industrial PLC & HMI Monitoring Station -->
+          <div class="project-card span-6 tilt-card reveal-on-scroll" data-category="industrial" onclick="openArchModal(0)" data-cursor="INSPECT_ARCH">
+            <div class="card-glare"></div>
+            <div>
+              <div class="proj-top-bar">
+                <div class="proj-icon-box"><i class="fas fa-microchip"></i></div>
+                <span class="proj-status-badge"><i class="fas fa-gauge-high"></i> Operational • Industrial SCADA</span>
+              </div>
+              <div class="proj-client">Industrial Manufacturing &amp; Processing</div>
+              <h3 class="proj-title">Automated Batching PLC &amp; HMI Control Suite</h3>
+              <p class="proj-desc">
+                Architected full PLC routine sequencing (Ladder Logic / Structured Text) with custom operator HMI touch panels. Features PID process control, live diagnostic telemetry, and alarm management.
+              </p>
+            </div>
+            <div class="proj-footer">
+              <div class="tech-tags">
+                <span class="tech-tag">Siemens TIA Portal</span>
+                <span class="tech-tag">HMI / WinCC</span>
+                <span class="tech-tag">Ladder Logic</span>
+                <span class="tech-tag">Modbus TCP</span>
+              </div>
+              <button class="inspect-arch-btn">Architecture <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- 2. SCADA Telemetry & Industrial Data Logger -->
+          <div class="project-card span-6 tilt-card reveal-on-scroll" data-category="industrial" onclick="openArchModal(1)" data-cursor="INSPECT_ARCH">
+            <div class="card-glare"></div>
+            <div>
+              <div class="proj-top-bar">
+                <div class="proj-icon-box"><i class="fas fa-server"></i></div>
+                <span class="proj-status-badge"><i class="fas fa-bolt"></i> Real-time Telemetry</span>
+              </div>
+              <div class="proj-client">Smart Factory &amp; Industrial IoT Hub</div>
+              <h3 class="proj-title">Industrial SCADA &amp; High-Frequency Data Logger</h3>
+              <p class="proj-desc">
+                Engineered a continuous industrial data acquisition gateway bridging shop-floor PLCs to SQL historians via OPC-UA and Modbus protocols for yield auditing, cycle analysis, and predictive upkeep.
+              </p>
+            </div>
+            <div class="proj-footer">
+              <div class="tech-tags">
+                <span class="tech-tag">C# / .NET</span>
+                <span class="tech-tag">OPC-UA</span>
+                <span class="tech-tag">SQL Server</span>
+                <span class="tech-tag">IoT Gateway</span>
+              </div>
+              <button class="inspect-arch-btn">Architecture <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- 3. US Real Estate Automation Engine -->
+          <div class="project-card span-6 tilt-card reveal-on-scroll" data-category="software-auto" onclick="openArchModal(2)" data-cursor="INSPECT_ARCH">
             <div class="card-glare"></div>
             <div>
               <div class="proj-top-bar">
@@ -1571,9 +1587,9 @@
                 <span class="proj-status-badge"><i class="fas fa-circle-check"></i> Production • US Client</span>
               </div>
               <div class="proj-client">US Dynamic Solutions Client</div>
-              <h3 class="proj-title">US Real Estate Automation</h3>
+              <h3 class="proj-title">End-to-End Cloud Automation Suite</h3>
               <p class="proj-desc">
-                Developed a custom automation suite for lead generation and property data synchronization across multiple platforms.
+                Developed an autonomous software bot orchestrator for lead generation, multi-portal synchronization, and automated document workflow management using headless containers and serverless crons.
               </p>
             </div>
             <div class="proj-footer">
@@ -1581,102 +1597,82 @@
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Selenium</span>
                 <span class="tech-tag">AWS Lambda</span>
+                <span class="tech-tag">ETL Automation</span>
               </div>
               <button class="inspect-arch-btn">Architecture <i class="fas fa-arrow-right"></i></button>
             </div>
           </div>
 
-          <!-- 2. Market Intelligence Scraper -->
-          <div class="project-card span-6 tilt-card reveal-on-scroll" data-category="cloud" onclick="openArchModal(1)" data-cursor="INSPECT_ARCH">
+          <!-- 4. High-Scale Market Intelligence & Data Pipeline -->
+          <div class="project-card span-6 tilt-card reveal-on-scroll" data-category="software-auto" onclick="openArchModal(3)" data-cursor="INSPECT_ARCH">
             <div class="card-glare"></div>
             <div>
               <div class="proj-top-bar">
-                <div class="proj-icon-box"><i class="fas fa-spider"></i></div>
-                <span class="proj-status-badge"><i class="fas fa-bolt"></i> 50k+ SKUs / Hour</span>
+                <div class="proj-icon-box"><i class="fas fa-database"></i></div>
+                <span class="proj-status-badge"><i class="fas fa-bolt"></i> 50k+ Records / Hr</span>
               </div>
               <div class="proj-client">US E-commerce Logistics Client</div>
-              <h3 class="proj-title">Market Intelligence Scraper</h3>
+              <h3 class="proj-title">Market Intelligence &amp; Data Pipeline</h3>
               <p class="proj-desc">
-                Built a high-scale real-time scraping engine to track competitor pricing and inventory levels for 50k+ products hourly.
+                High-throughput distributed scraping engine tracking inventory, price variations, and catalog shifts across 50,000+ data points hourly with automated normalization and NoSQL persistence.
               </p>
             </div>
             <div class="proj-footer">
               <div class="tech-tags">
                 <span class="tech-tag">Scrapy</span>
-                <span class="tech-tag">BeautifulSoup</span>
                 <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Data Cleansing</span>
+                <span class="tech-tag">Data Warehousing</span>
               </div>
               <button class="inspect-arch-btn">Architecture <i class="fas fa-arrow-right"></i></button>
             </div>
           </div>
 
-          <!-- 3. Baloch Tools POS -->
-          <div class="project-card span-4 tilt-card reveal-on-scroll" data-category="pos" onclick="openArchModal(2)" data-cursor="INSPECT_ARCH">
+          <!-- 5. Shameem Autos POS & Inventory Ecosystem -->
+          <div class="project-card span-6 tilt-card reveal-on-scroll" data-category="pos" onclick="openArchModal(4)" data-cursor="INSPECT_ARCH">
+            <div class="card-glare"></div>
+            <div>
+              <div class="proj-top-bar">
+                <div class="proj-icon-box"><i class="fas fa-warehouse"></i></div>
+                <span class="proj-status-badge">Enterprise Windows App</span>
+              </div>
+              <div class="proj-client">Industrial &amp; Automotive Supplies</div>
+              <h3 class="proj-title">Shameem Autos Industrial Inventory &amp; POS</h3>
+              <p class="proj-desc">
+                Industrial-grade POS and inventory software handling complex barcode cataloging, supplier ledger reconciliations, multi-counter querying, and real-time stock forecasting.
+              </p>
+            </div>
+            <div class="proj-footer">
+              <div class="tech-tags">
+                <span class="tech-tag">C# / WinForms</span>
+                <span class="tech-tag">MySQL RDBMS</span>
+                <span class="tech-tag">Inventory Auditing</span>
+                <span class="tech-tag">Barcode Automation</span>
+              </div>
+              <button class="inspect-arch-btn">Specs <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- 6. Baloch Tools POS & Stock Management -->
+          <div class="project-card span-6 tilt-card reveal-on-scroll" data-category="pos" onclick="openArchModal(5)" data-cursor="INSPECT_ARCH">
             <div class="card-glare"></div>
             <div>
               <div class="proj-top-bar">
                 <div class="proj-icon-box"><i class="fas fa-cash-register"></i></div>
-                <span class="proj-status-badge">Desktop App</span>
+                <span class="proj-status-badge">Local Offline First</span>
               </div>
-              <div class="proj-client">Python / Tkinter / SQLite</div>
-              <h3 class="proj-title">Baloch Tools POS</h3>
+              <div class="proj-client">Hardware &amp; Machinery Wholesale</div>
+              <h3 class="proj-title">Baloch Tools Data Management &amp; POS</h3>
               <p class="proj-desc">
-                Complete retail inventory and sales management ecosystem engineered for rapid billing and stock tracking.
+                Complete retail inventory and offline-capable data management platform engineered for zero-latency checkout, invoice print automation, and warehouse stock tracking.
               </p>
             </div>
             <div class="proj-footer">
               <div class="tech-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Tkinter</span>
+                <span class="tech-tag">Python / Tkinter</span>
                 <span class="tech-tag">SQLite</span>
-              </div>
-              <button class="inspect-arch-btn">Specs <i class="fas fa-arrow-right"></i></button>
-            </div>
-          </div>
-
-          <!-- 4. Shameem Autos POS -->
-          <div class="project-card span-4 tilt-card reveal-on-scroll" data-category="pos" onclick="openArchModal(3)" data-cursor="INSPECT_ARCH">
-            <div class="card-glare"></div>
-            <div>
-              <div class="proj-top-bar">
-                <div class="proj-icon-box"><i class="fas fa-gears"></i></div>
-                <span class="proj-status-badge">Windows App</span>
-              </div>
-              <div class="proj-client">C# / WinForms / MySQL</div>
-              <h3 class="proj-title">Shameem Autos POS</h3>
-              <p class="proj-desc">
-                Enterprise POS for automotive parts and decorative management with relational MySQL database backing.
-              </p>
-            </div>
-            <div class="proj-footer">
-              <div class="tech-tags">
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">WinForms</span>
-                <span class="tech-tag">MySQL</span>
-              </div>
-              <button class="inspect-arch-btn">Specs <i class="fas fa-arrow-right"></i></button>
-            </div>
-          </div>
-
-          <!-- 5. Gasoora Brothers POS -->
-          <div class="project-card span-4 tilt-card reveal-on-scroll" data-category="pos" onclick="openArchModal(4)" data-cursor="INSPECT_ARCH">
-            <div class="card-glare"></div>
-            <div>
-              <div class="proj-top-bar">
-                <div class="proj-icon-box"><i class="fas fa-utensils"></i></div>
-                <span class="proj-status-badge">Retail &amp; Restaurant</span>
-              </div>
-              <div class="proj-client">C# / WinForms / SQLite</div>
-              <h3 class="proj-title">Gasoora Brothers POS</h3>
-              <p class="proj-desc">
-                Dual-vertical POS architected for both Sweets/Bakery counters and full-service Restaurant branches.
-              </p>
-            </div>
-            <div class="proj-footer">
-              <div class="tech-tags">
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">WinForms</span>
-                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Thermal Automation</span>
+                <span class="tech-tag">Data Ledger</span>
               </div>
               <button class="inspect-arch-btn">Specs <i class="fas fa-arrow-right"></i></button>
             </div>
@@ -1685,111 +1681,109 @@
       </div>
     </section>
 
-    <!-- SKILLS & EXECUTIVE LEADERSHIP MATRIX -->
+    <!-- SKILLS MATRIX: AUTOMATION, PLC/HMI, DATA & COGNITIVE -->
     <section class="section-padding" id="skills">
       <div class="container-custom">
         <div class="section-header-wrap reveal-on-scroll">
-          <span class="section-eyebrow">02_TECHNICAL_&_COGNITIVE_STACK</span>
-          <h2 class="section-heading">Expertise &amp; Engineering Leadership</h2>
+          <span class="section-eyebrow">02_TECHNICAL_&amp;_INDUSTRIAL_STACK</span>
+          <h2 class="section-heading">Core Automation, PLC/HMI &amp; Data Matrix</h2>
         </div>
 
-        <!-- Hard Technical Stack -->
+        <!-- 4 Primary Specialized Pillars -->
         <div class="skills-matrix-grid">
-          <div class="hard-skill-card tilt-card reveal-on-scroll" data-cursor="PYTHON_CORE">
+          <!-- PLC & Industrial Automation -->
+          <div class="hard-skill-card tilt-card reveal-on-scroll" data-cursor="PLC_AUTOMATION">
             <div class="skill-header-row">
-              <i class="fab fa-python skill-icon"></i>
-              <span class="skill-level-badge">CORE RUNTIME</span>
+              <i class="fas fa-microchip skill-icon"></i>
+              <span class="skill-level-badge">INDUSTRIAL</span>
             </div>
-            <h4 class="skill-name">Python</h4>
-            <div class="skill-sub">Scrapy • Selenium • Tkinter • AWS</div>
+            <h4 class="skill-name">PLC Programming</h4>
+            <div class="skill-sub">Siemens TIA Portal • Ladder • ST • Allen-Bradley</div>
             <div class="telemetry-bar-bg">
-              <div class="telemetry-bar-fill" style="width: 96%;"></div>
+              <div class="telemetry-bar-fill" style="width: 95%;"></div>
             </div>
           </div>
 
-          <div class="hard-skill-card tilt-card reveal-on-scroll" data-cursor="DOTNET_CORE">
+          <!-- HMI / SCADA Systems -->
+          <div class="hard-skill-card tilt-card reveal-on-scroll" data-cursor="HMI_SCADA">
             <div class="skill-header-row">
-              <i class="fab fa-windows skill-icon"></i>
-              <span class="skill-level-badge">ENTERPRISE</span>
+              <i class="fas fa-desktop skill-icon"></i>
+              <span class="skill-level-badge">OPERATOR UI</span>
             </div>
-            <h4 class="skill-name">C# / .NET</h4>
-            <div class="skill-sub">WinForms • MySQL • SQLite POS</div>
+            <h4 class="skill-name">HMI &amp; SCADA</h4>
+            <div class="skill-sub">WinCC • FactoryTalk • Touch Interfaces • Modbus</div>
             <div class="telemetry-bar-bg">
-              <div class="telemetry-bar-fill" style="width: 94%;"></div>
+              <div class="telemetry-bar-fill" style="width: 92%;"></div>
             </div>
           </div>
 
-          <div class="hard-skill-card tilt-card reveal-on-scroll" data-cursor="KOTLIN_ANDROID">
+          <!-- Software Automation -->
+          <div class="hard-skill-card tilt-card reveal-on-scroll" data-cursor="SOFTWARE_BOTS">
             <div class="skill-header-row">
-              <i class="fab fa-android skill-icon"></i>
-              <span class="skill-level-badge">MOBILE DEV</span>
+              <i class="fas fa-robot skill-icon"></i>
+              <span class="skill-level-badge">CLOUD &amp; OS BOTS</span>
             </div>
-            <h4 class="skill-name">Kotlin</h4>
-            <div class="skill-sub">Native Android Architecture</div>
-            <div class="telemetry-bar-bg">
-              <div class="telemetry-bar-fill" style="width: 88%;"></div>
-            </div>
-          </div>
-
-          <div class="hard-skill-card tilt-card reveal-on-scroll" data-cursor="AUTOMATION_ARCH">
-            <div class="skill-header-row">
-              <i class="fas fa-terminal skill-icon"></i>
-              <span class="skill-level-badge">50K+ OPS/HR</span>
-            </div>
-            <h4 class="skill-name">Automation</h4>
-            <div class="skill-sub">Bots • Data Pipelines • Cloud Cron</div>
+            <h4 class="skill-name">Software Automation</h4>
+            <div class="skill-sub">Python • Selenium • Scrapy • AWS Cron Workers</div>
             <div class="telemetry-bar-bg">
               <div class="telemetry-bar-fill" style="width: 98%;"></div>
             </div>
           </div>
+
+          <!-- Data Management & Industrial Softwares -->
+          <div class="hard-skill-card tilt-card reveal-on-scroll" data-cursor="DATA_MANAGEMENT">
+            <div class="skill-header-row">
+              <i class="fas fa-database skill-icon"></i>
+              <span class="skill-level-badge">ENTERPRISE DATA</span>
+            </div>
+            <h4 class="skill-name">Data Management</h4>
+            <div class="skill-sub">SQL Server • MySQL • SQLite • ETL Pipelines • C#</div>
+            <div class="telemetry-bar-bg">
+              <div class="telemetry-bar-fill" style="width: 96%;"></div>
+            </div>
+          </div>
         </div>
 
-        <!-- Executive & Cognitive Skills -->
+        <!-- Cognitive & Leadership Skills -->
         <div class="cognitive-grid">
-          <div class="cognitive-card reveal-on-scroll" data-cursor="MINDSET">
-            <i class="fas fa-lightbulb"></i>
-            <h5>Creative Mindset</h5>
-            <p>Approaching technical challenges with artistic flair and innovative thinking.</p>
+          <div class="cognitive-card reveal-on-scroll" data-cursor="SYSTEMS_DESIGN">
+            <i class="fas fa-diagram-project"></i>
+            <h5>Industrial Systems Design</h5>
+            <p>Architecting dependable I/O architectures, fail-safes, interlocks, and sensor integration.</p>
           </div>
 
-          <div class="cognitive-card reveal-on-scroll" data-cursor="SOLVER">
-            <i class="fas fa-puzzle-piece"></i>
-            <h5>Problem Solving</h5>
-            <p>Deconstructing complex bottlenecks into elegant, scalable solutions.</p>
+          <div class="cognitive-card reveal-on-scroll" data-cursor="DATA_INTEGRITY">
+            <i class="fas fa-shield-halved"></i>
+            <h5>Data Integrity &amp; Auditing</h5>
+            <p>Designing zero-loss databases, robust transaction controls, and verifiable reporting logs.</p>
           </div>
 
-          <div class="cognitive-card reveal-on-scroll" data-cursor="CEO_LEAD">
-            <i class="fas fa-users"></i>
-            <h5>Leadership</h5>
-            <p>Empowering teams and leading by example at MetaBiz Solutions.</p>
+          <div class="cognitive-card reveal-on-scroll" data-cursor="LEADERSHIP">
+            <i class="fas fa-users-gear"></i>
+            <h5>Project Leadership</h5>
+            <p>Leading software and controls deployments on time and within specifications at MetaBiz.</p>
           </div>
 
-          <div class="cognitive-card reveal-on-scroll" data-cursor="ARCHITECTURE">
-            <i class="fas fa-brain"></i>
-            <h5>Critical Thinking</h5>
-            <p>Analyzing architectural decisions for long-term sustainability.</p>
-          </div>
-
-          <div class="cognitive-card reveal-on-scroll" data-cursor="AGILITY">
-            <i class="fas fa-sync"></i>
-            <h5>Adaptability</h5>
-            <p>Rapidly evolving with the latest technological shifts.</p>
+          <div class="cognitive-card reveal-on-scroll" data-cursor="DEBUGGING">
+            <i class="fas fa-wrench"></i>
+            <h5>Root-Cause Diagnostics</h5>
+            <p>Methodical troubleshooting across hardware electrical signals, communication buses, and application code.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT & DIRECT TRANSMISSION SECTION -->
+    <!-- CONTACT SECTION -->
     <section class="section-padding" id="contact">
       <div class="container-custom">
         <div class="comms-card tilt-card reveal-on-scroll">
           <div class="kernel-badge">
             <span class="pulse-dot"></span>
-            <span>ENCRYPTED DIRECT CHANNEL • READY FOR DEPLOYMENT</span>
+            <span>DIRECT DEPLOYMENT CHANNEL • INDUSTRIAL &amp; AUTOMATION CONSULTING</span>
           </div>
-          <h2 class="section-heading" style="margin-bottom: 1rem;">Let's Architect Your Next System</h2>
-          <p style="color: var(--text-muted); max-width: 560px; margin: 0 auto 2.25rem; font-size: 1.05rem;">
-            Ready to start your next big software, automation, or enterprise POS project? Reach out directly to initiate collaboration.
+          <h2 class="section-heading" style="margin-bottom: 1rem;">Let's Automate Your Operations</h2>
+          <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2.25rem; font-size: 1.05rem;">
+            Whether you need custom PLC/HMI programming, intelligent software automation bots, or centralized data management platforms, get in touch to get started.
           </p>
 
           <a href="https://wa.me/923226527520" target="_blank" rel="noopener" class="whatsapp-cyber-btn" data-cursor="WHATSAPP_INIT">
@@ -1819,7 +1813,7 @@
   <!-- FOOTER -->
   <footer class="cyber-footer">
     <div class="container-custom">
-      <p>&copy; 2026 Asad Irfan • Software Developer &amp; CEO at MetaBiz Solutions. Engineered with precision.</p>
+      <p>&copy; 2026 Asad Irfan • Automation Engineer, PLC/HMI Programmer &amp; CEO at MetaBiz Solutions.</p>
     </div>
   </footer>
 
@@ -1847,68 +1841,76 @@
     </div>
   </div>
 
-  <!-- Three.js WebGL Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <script>
-    /* ==========================================================================
-       1. SYSTEM ARCHITECTURE BLUEPRINTS DATA (FOR PROJECT INSPECTOR MODAL)
-       ========================================================================== */
+    /* 1. PROJECT BLUEPRINTS DATA */
     const projectBlueprints = [
       {
-        title: 'US Real Estate Automation',
-        client: 'US Dynamic Solutions Client',
-        desc: 'Developed a custom automation suite for lead generation and property data synchronization across multiple real estate platforms using headless browser orchestration and serverless triggers.',
+        title: 'Automated Batching PLC & HMI Control Suite',
+        client: 'Industrial Automation • Siemens S7-1200 / TIA Portal / WinCC',
+        desc: 'Engineered closed-loop sequence logic, analog sensor scaling (4-20mA), VFD motor speed control, and multi-screen HMI recipes for recipe handling and batch dosing.',
         nodes: [
-          { step: '01 // INGESTION', name: 'Multi-Platform MLS & Lead Portals' },
-          { step: '02 // ORCHESTRATION', name: 'Python + Selenium Headless Workers' },
-          { step: '03 // CLOUD EXECUTION', name: 'AWS Lambda Scheduled Sync' }
+          { step: '01 // I/O & SENSORS', name: 'Digital/Analog Inputs & Scale Transmitters' },
+          { step: '02 // PLC LOGIC', name: 'Siemens TIA Portal Ladder & ST Control Blocks' },
+          { step: '03 // HMI RUNTIME', name: 'WinCC Comfort Panel Touch Interface' }
         ],
-        log: `[AWS-LAMBDA] Initializing RealEstateSyncWorker...\n[SELENIUM] Authenticated session established across target portals.\n[SYNC_OK] 1,420 property records & lead webhooks synchronized in 4.2s.`
+        log: `[PLC_DIAG] S7-1200 CPU 1214C DC/DC/DC: RUN mode confirmed.\n[PROFINET] Station IO connection established (0 frame drops).\n[HMI_WINCC] Recipe #04 loaded. Batch cycles automated with zero error.`
       },
       {
-        title: 'Market Intelligence Scraper',
-        client: 'US E-commerce Logistics Client',
-        desc: 'Built a high-scale real-time scraping engine to track competitor pricing and inventory levels for 50,000+ products hourly with distributed proxy rotation and NoSQL persistence.',
+        title: 'Industrial SCADA & High-Frequency Data Logger',
+        client: 'Smart Manufacturing • C# / .NET / OPC-UA / SQL Server',
+        desc: 'Continuous manufacturing plant monitoring tool acquiring live PLC machine states, cycle speeds, motor temperatures, and error codes over OPC-UA and Modbus TCP.',
         nodes: [
-          { step: '01 // SPIDER CLUSTER', name: 'Scrapy Asynchronous Crawlers' },
-          { step: '02 // DOM PARSER', name: 'BeautifulSoup Extraction Pipeline' },
-          { step: '03 // DATA LAKE', name: 'MongoDB Time-Series Inventory Store' }
+          { step: '01 // BUS PROTOCOL', name: 'OPC-UA Server & Modbus TCP Driver' },
+          { step: '02 // DATA ENGINE', name: 'C# Asynchronous Telemetry Ingestion' },
+          { step: '03 // DATA HISTORIAN', name: 'Partitioned SQL Server Production DB' }
         ],
-        log: `[SCRAPY_CORE] Spawning 32 concurrent spider coroutines...\n[PARSER] Extracted SKU pricing & stock delta for 52,400 items/hr.\n[MONGODB] Bulk upsert committed with 99.94% parse accuracy.`
+        log: `[OPC_UA] Subscribed to 284 PLC tags @ 50ms polling rate.\n[DATA_HISTORIAN] Bulk insertion committed: 100,000+ machine records logged.\n[SCADA_UI] Real-time line rate and OEE calculation rendered.`
       },
       {
-        title: 'Baloch Tools POS',
-        client: 'Desktop Retail Ecosystem • Python / Tkinter / SQLite',
-        desc: 'Complete retail inventory and sales management ecosystem featuring barcode billing, stock threshold alerts, and instant invoice generation.',
+        title: 'End-to-End Cloud Automation Suite',
+        client: 'US Dynamic Solutions Client • Python / Selenium / AWS Lambda',
+        desc: 'Autonomous lead generation, data synchronizer, and web workflow bot processing thousands of lead entries across various platforms with zero human intervention.',
         nodes: [
-          { step: '01 // INTERFACE', name: 'Python Tkinter Desktop GUI' },
-          { step: '02 // BUSINESS LOGIC', name: 'Inventory & Billing Controller' },
-          { step: '03 // LOCAL DB', name: 'ACID-Compliant SQLite Engine' }
+          { step: '01 // INGESTION', name: 'Portal Ingestion & Anti-Detection Handshake' },
+          { step: '02 // ENGINE', name: 'Python Headless Task Scheduler' },
+          { step: '03 // SYNC', name: 'AWS Cloud Microservices & Webhooks' }
         ],
-        log: `[POS_BOOT] Baloch Tools Retail Terminal v2.4 Ready.\n[SQLITE] Local inventory ledger mounted (0ms network latency).\n[INVOICE] Thermal receipt & ledger entry committed.`
+        log: `[AUTOMATION] Running distributed task worker batch #884...\n[PARSER] Extracted and verified lead metadata.\n[CLOUD_SYNC] Synced records to external CRM endpoints via REST API.`
       },
       {
-        title: 'Shameem Autos POS',
-        client: 'Enterprise Windows App • C# / WinForms / MySQL',
-        desc: 'Enterprise POS for automotive parts and decorative management engineered for high-volume SKU catalogs, supplier ledgers, and multi-counter querying.',
+        title: 'Market Intelligence & Data Pipeline',
+        client: 'US E-commerce Logistics • Scrapy / MongoDB',
+        desc: 'Real-time asynchronous scraping cluster harvesting competitive product pricing and stock figures across 50,000+ items every hour with robust anti-ban architecture.',
         nodes: [
-          { step: '01 // FRONTEND', name: 'C# .NET WinForms UI' },
-          { step: '02 // ORM / QUERY', name: 'ADO.NET High-Speed Data Layer' },
-          { step: '03 // RDBMS', name: 'MySQL Relational Server' }
+          { step: '01 // CRAWLERS', name: 'Scrapy High-Concurrency Coroutines' },
+          { step: '02 // SANITIZATION', name: 'Python Data Cleansing & Deduplication' },
+          { step: '03 // WAREHOUSE', name: 'MongoDB Time-Series Data Lake' }
         ],
-        log: `[DOTNET_RUNTIME] Shameem Autos Enterprise POS initialized.\n[MYSQL_POOL] Connected to relational parts catalog.\n[STATUS] Real-time stock & vendor ledger active.`
+        log: `[SCRAPY_CORE] Active worker threads: 32.\n[ETL_PIPELINE] Cleaned and structured 52,000 product rows.\n[UPSERT] Database updated with 99.98% pipeline uptime.`
       },
       {
-        title: 'Gasoora Brothers POS',
-        client: 'Dual-Vertical POS • C# / WinForms / SQLite',
-        desc: 'Dual-vertical POS architected for both Sweets/Bakery retail counters and full-service Restaurant dining branches with unified reporting.',
+        title: 'Shameem Autos Industrial Inventory & POS',
+        client: 'Enterprise Software • C# / WinForms / MySQL',
+        desc: 'Industrial parts catalog, barcode scanning system, vendor balances ledger, and multi-terminal transaction processing built for extreme durability.',
         nodes: [
-          { step: '01 // DUAL UI', name: 'C# WinForms (Bakery + KOT Dining)' },
-          { step: '02 // ENGINE', name: 'Unified Order & Table Billing Core' },
-          { step: '03 // STORAGE', name: 'Embedded High-Speed SQLite DB' }
+          { step: '01 // FRONTEND', name: 'High-Speed C# .NET Windows Interface' },
+          { step: '02 // DATA LAYER', name: 'ADO.NET Connection Pooling & Cache' },
+          { step: '03 // DATABASE', name: 'Relational MySQL High-Availability DB' }
         ],
-        log: `[POS_CORE] Dual-Vertical Mode: [Sweets Counter + Restaurant KOT].\n[SQLITE] Synchronized daily sales across both branch verticals.`
+        log: `[APP_BOOT] Inventory engine started with 20,000+ active SKUs.\n[DATABASE] Query execution latency: 4ms.\n[TRANSACTION] Receipt thermal printer automated & ledger reconciled.`
+      },
+      {
+        title: 'Baloch Tools Data Management & POS',
+        client: 'Wholesale Retail • Python / Tkinter / SQLite',
+        desc: 'Offline-first desktop software application managing warehouse stocks, customer credits, product categorization, and barcode sales slips.',
+        nodes: [
+          { step: '01 // GUI', name: 'Clean Python Tkinter Control Surface' },
+          { step: '02 // LOGIC', name: 'Stock Validation & Invoice Math Core' },
+          { step: '03 // PERSISTENCE', name: 'Embedded SQLite Transaction Ledger' }
+        ],
+        log: `[APP_INIT] Offline database checked and mounted.\n[STOCK] Low-quantity alerts triggered for machinery consumables.\n[REPORT] Daily sales report exported in CSV & PDF formats.`
       }
     ];
 
@@ -1941,18 +1943,19 @@
       if (e.key === 'Escape') closeArchModal();
     });
 
-    /* ==========================================================================
-       2. INTERACTIVE LIVE CLI TERMINAL EMULATOR
-       ========================================================================== */
+    /* 2. TERMINAL CLI */
     const terminalOutput = document.getElementById('terminalOutput');
     const terminalInput = document.getElementById('terminalInput');
 
     const cliCommands = {
-      help: `Available commands: <strong style="color:#fff">whoami</strong>, <strong style="color:#fff">projects</strong>, <strong style="color:#fff">skills</strong>, <strong style="color:#fff">company</strong>, <strong style="color:#fff">contact</strong>, <strong style="color:#fff">clear</strong>`,
-      whoami: `<strong>Asad Irfan</strong> — Software Developer, Team Leader &amp; CEO at MetaBiz Solutions. Specializing in Python automation, high-scale web scraping, and C#/.NET enterprise POS systems.`,
-      projects: `• <strong>US Real Estate Automation</strong> (Python, Selenium, AWS Lambda)<br>• <strong>Market Intelligence Scraper</strong> (50k+ products/hr, Scrapy, MongoDB)<br>• <strong>Baloch Tools POS</strong> (Python, Tkinter, SQLite)<br>• <strong>Shameem Autos POS</strong> (C#, WinForms, MySQL)<br>• <strong>Gasoora Brothers POS</strong> (C#, WinForms, SQLite)`,
-      skills: `• <strong>Languages &amp; Runtimes:</strong> Python, C# / .NET, Kotlin, SQL/NoSQL<br>• <strong>Leadership:</strong> CEO @ MetaBiz Solutions, Problem Solving, Critical Thinking, Adaptability`,
-      company: `<strong>MetaBiz Solutions</strong> — Launching official portal... <a href="https://metabizsolutions.github.io/official-website/" target="_blank" style="color:var(--accent-primary);text-decoration:underline;">metabizsolutions.github.io/official-website/</a>`,
+      help: `Available commands: <strong style="color:#fff">whoami</strong>, <strong style="color:#fff">plc</strong>, <strong style="color:#fff">hmi</strong>, <strong style="color:#fff">data</strong>, <strong style="color:#fff">automation</strong>, <strong style="color:#fff">projects</strong>, <strong style="color:#fff">clear</strong>`,
+      whoami: `<strong>Asad Irfan</strong> — Automation Engineer, PLC/HMI Programmer &amp; CEO at MetaBiz Solutions. Bridging factory floor hardware with modern software intelligence.`,
+      plc: `• <strong>PLC Hardware &amp; Environments:</strong> Siemens S7-1200 / S7-1500, Allen-Bradley Micro800, Omron<br>• <strong>Languages:</strong> Ladder Logic (LD), Structured Text (ST), Function Block Diagram (FBD)<br>• <strong>Communication:</strong> Modbus RTU/TCP, Profinet, Ethernet/IP`,
+      hmi: `• <strong>HMI / SCADA:</strong> Siemens WinCC (TIA Portal), FactoryTalk View, Ignition SCADA<br>• <strong>Capabilities:</strong> Real-time process visualization, animated diagnostics, alarm logs, recipe management`,
+      data: `• <strong>Data Management:</strong> SQL Server, MySQL, SQLite, MongoDB<br>• <strong>Pipelines:</strong> Industrial Telemetry Logging, Shop-floor to Cloud ETL, REST APIs`,
+      automation: `• <strong>Software Automation:</strong> Web Scraping (Scrapy, Selenium), Headless Bots, Task Queues, Python Automation, AWS Serverless`,
+      projects: `• <strong>Automated Batching PLC/HMI</strong> (Siemens TIA Portal)<br>• <strong>SCADA Telemetry &amp; Logger</strong> (C#, OPC-UA, SQL)<br>• <strong>US Cloud Automation Suite</strong> (Python, AWS)<br>• <strong>Market Scraper</strong> (50k/hr, MongoDB)<br>• <strong>Shameem Autos POS</strong> (C#, MySQL)<br>• <strong>Baloch Tools POS</strong> (Python, SQLite)`,
+      company: `<strong>MetaBiz Solutions</strong> — Official website: <a href="https://metabizsolutions.github.io/official-website/" target="_blank" style="color:var(--accent-primary);text-decoration:underline;">metabizsolutions.github.io/official-website/</a>`,
       contact: `• <strong>WhatsApp:</strong> <a href="https://wa.me/923226527520" target="_blank" style="color:var(--accent-secondary);">+92 322 6527520</a><br>• <strong>Email:</strong> asadirfanmzg@gmail.com`
     };
 
@@ -1983,9 +1986,7 @@
       terminalInput.value = '';
     }
 
-    /* ==========================================================================
-       3. PROJECT CATEGORY FILTER
-       ========================================================================== */
+    /* 3. FILTER PROJECTS */
     function filterProjects(cat, btn) {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -1999,9 +2000,7 @@
       });
     }
 
-    /* ==========================================================================
-       4. 2D TOUCH & CLICK BINARY PACKET STREAM ENGINE (UNIQUE FOR MOBILE)
-       ========================================================================== */
+    /* 4. 2D TOUCH BINARY ENGINE */
     function initBinaryTouchEngine() {
       const canvas = document.getElementById('binary-fx-canvas');
       if (!canvas) return;
@@ -2016,7 +2015,7 @@
 
       const packets = [];
       const nodes = [];
-      const glyphs = ['0', '1', '0x1F', '{ }', '</>', '01', 'SYN', 'ACK'];
+      const glyphs = ['PLC', 'HMI', 'I/O', 'MODBUS', '01', 'ACK', 'RUN', 'SCADA'];
 
       function getPrimary() {
         return getComputedStyle(document.documentElement).getPropertyValue('--accent-primary').trim() || '#00f0ff';
@@ -2062,7 +2061,6 @@
       function renderBinaryFX() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // Draw network circuit trace between recent touch points
         if (nodes.length > 1) {
           ctx.save();
           for (let i = 1; i < nodes.length; i++) {
@@ -2085,7 +2083,6 @@
           if (nodes[i].age >= nodes[i].maxAge) nodes.splice(i, 1);
         }
 
-        // Draw floating binary & code glyphs
         ctx.font = '700 11px "JetBrains Mono", monospace';
         for (let i = packets.length - 1; i >= 0; i--) {
           const p = packets[i];
@@ -2112,9 +2109,7 @@
       renderBinaryFX();
     }
 
-    /* ==========================================================================
-       5. CUSTOM CYBERNETIC CURSOR & 3D CARD TILT
-       ========================================================================== */
+    /* 5. CURSOR & TILT */
     const cursorCore = document.getElementById('cursorCore');
     const cursorReticle = document.getElementById('cursorReticle');
     const cursorTag = document.getElementById('cursorTag');
@@ -2135,7 +2130,7 @@
       }
 
       if (hudTelemetry) {
-        hudTelemetry.innerHTML = `LATENCY: 12ms &nbsp;|&nbsp; X: ${String(mouseX).padStart(4, '0')} &nbsp; Y: ${String(mouseY).padStart(4, '0')}`;
+        hudTelemetry.innerHTML = `LATENCY: 08ms &nbsp;|&nbsp; MODBUS/TCP: ACTIVE &nbsp;|&nbsp; X: ${String(mouseX).padStart(4, '0')} &nbsp; Y: ${String(mouseY).padStart(4, '0')}`;
       }
 
       const target = e.target.closest('[data-cursor], a, button');
@@ -2183,9 +2178,7 @@
       });
     }
 
-    /* ==========================================================================
-       6. THREE.JS 3D CYBERNETIC NEURAL NETWORK & SERVER TOPOLOGY
-       ========================================================================== */
+    /* 6. THREE.JS SCENE */
     let threePrimaryMat, threeSecondaryMat;
     let target3DX = 0;
     let target3DY = 0;
@@ -2250,20 +2243,17 @@
       const networkGroup = new THREE.Group();
       scene.add(networkGroup);
 
-      // Central Cybernetic Core (Icosahedron)
       const coreGeo = new THREE.IcosahedronGeometry(5.5, 1);
       const coreMesh = new THREE.Mesh(coreGeo, threePrimaryMat);
       coreMesh.position.set(11, 2, -5);
       networkGroup.add(coreMesh);
 
-      // Outer Data Ring (Torus)
       const ringGeo = new THREE.TorusGeometry(8, 0.18, 16, 80);
       const ringMesh = new THREE.Mesh(ringGeo, threeSecondaryMat);
       ringMesh.position.set(11, 2, -5);
       ringMesh.rotation.x = Math.PI / 3;
       networkGroup.add(ringMesh);
 
-      // Floating Server Nodes (Octahedrons & Cubes)
       const nodesList = [coreMesh, ringMesh];
       const nodeGeos = [
         new THREE.OctahedronGeometry(1.3, 0),
@@ -2284,7 +2274,6 @@
         nodesList.push(mesh);
       }
 
-      // Data Matrix Particle Cloud
       const pCount = 320;
       const pPos = new Float32Array(pCount * 3);
       for (let i = 0; i < pCount * 3; i++) {
@@ -2346,9 +2335,7 @@
       });
     }
 
-    /* ==========================================================================
-       7. CYBER THEME SWITCHER & SCROLL TELEMETRY
-       ========================================================================== */
+    /* 7. THEMES & SCROLL */
     const cyberThemes = [
       { p: '#00f0ff', s: '#10b981', t: '#6366f1' },
       { p: '#10b981', s: '#00f0ff', t: '#3b82f6' },
